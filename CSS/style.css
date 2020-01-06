@@ -1,0 +1,51 @@
+
+.bio-card{
+  text-decoration: none;
+  color: black;
+}
+.bio-card:hover .front{
+  text-decoration: none;
+  color: black;
+  background-color:#ededed;
+  cursor:pointer;
+}
+.bio-card:hover .back{
+  text-decoration: none;
+  color: black;
+  cursor:pointer;
+}
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 100%;
+}
+
+.flipper {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: 0.5s;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
